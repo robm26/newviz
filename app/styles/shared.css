@@ -1,0 +1,325 @@
+.rootContainer {
+    background-color:whitesmoke;
+    border: none;
+    border-radius:6px;
+    padding:5px;
+    font-family:Arial;
+}
+
+.menuContainer {
+    background-color:lightgrey;
+    padding:7px;
+    border-radius:5px;
+}
+
+.menuContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+
+.menuContainer li {
+    float:left;
+    padding-left: 4px;
+    padding-right: 6px;
+}
+
+.menuContainer .tableTitle {
+    color:darkslategray;
+    background-color:gainsboro;
+    padding:8px;
+    border-radius:5px;
+    margin-left:10px;
+
+
+}
+
+.menuContainer .scanButtonCell {
+    padding-right:20px;
+    padding-left:10px;
+}
+
+.subMenu {
+    background-color:gainsboro;
+    padding:5px;
+    border-radius:5px;
+}
+
+.homeLink {
+    font-size: 22px;
+    color: blue;
+
+}
+.regionWord {
+
+    color:grey;
+}
+.regionLink {
+    color:dimgray;
+    text-decoration:none;
+ }
+
+.regionLinkSelected {
+    font-weight:bold;
+    color:green;
+    text-decoration:none;
+}
+
+.readFormTable {
+    background-color: gainsboro;
+    border-radius:6px;
+    padding:3px;
+}
+
+
+.spinner {
+    float:right;
+    margin-top:0px;
+}
+
+a {
+    text-decoration:none;
+}
+
+.emoji {
+    font-size:small;
+    opacity: 0.5;
+}
+
+.pkBox {
+    background-color:whitesmoke;
+    border:none;
+    font-weight:bold;
+    border-radius:4px;
+    color:dodgerblue;
+    padding:3px;
+    width:130px;
+ }
+
+.skBox {
+    background-color:whitesmoke;
+    border:none;
+    font-weight:bold;
+    border-radius:4px;
+    color:limegreen;
+    padding:3px;
+    width:130px;
+}
+
+.pkName {
+    color: darkblue;
+}
+.skName {
+    color:darkgreen;
+}
+
+.readFormTable button {
+    color:grey;
+    border-radius:5px;
+    width:60px;
+    border:none;
+}
+
+.readFormTable td {
+    background-color: gainsboro;
+}
+
+.tableTitle .selected {
+    font-weight:bold;
+    color:blue;
+}
+.tableTitle a {
+    color:grey;
+}
+
+
+.itemTableControls {
+    padding:5px;
+    padding-left:2px;
+    margin-top: -32px;
+
+}
+
+.itemTableControls button {
+    font-size:small;
+    color:dimgrey;
+    width: 80px;
+    height: 22px;
+    border-radius:6px;
+    margin-left:5px;
+
+
+}
+
+.lekTable {
+    background-color: silver;
+    color:grey;
+    padding:2px;
+    margin-top:10px;
+    font-size:small;
+    border-radius:6px;
+}
+
+.lekTooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.lekTooltip .lekText {
+    visibility: hidden;
+    width: 120px;
+    font-size:small;
+    background-color: grey;
+    color: gainsboro;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    opacity: 0.9;
+
+}
+.lekTooltip:hover .lekText {
+    visibility: visible;
+}
+
+textarea {
+    background-color:gainsboro;
+    border:1px solid silver;
+}
+
+button:hover {
+    background-color: silver;
+    color: white;
+}
+
+.prev {
+    background-color: whitesmoke;
+    padding:0px;
+    margin:0px;
+    font-size:x-small !important;
+}
+.replicas {
+    font-size:smaller;
+}
+
+.cwForm {
+    background-color: gainsboro;
+    padding:5px;
+    border-radius: 6px;
+    margin-top:5px;
+    color:dimgray;
+    font-size:smaller;
+}
+
+.cwForm button {
+    border:none;
+    border-radius:5px;
+    padding:3px;
+}
+.minutesBack {
+    background-color:whitesmoke;
+    border:none;
+    font-weight:bold;
+    border-radius:4px;
+    color:dimgray;
+    padding:3px;
+    width:60px;
+    text-align: center;
+    font-size: smaller;
+}
+.minutesBackButton {
+
+}
+
+.chart {
+    background-color:lightgray;
+    margin:3px;
+    margin-top:8px;
+    padding:6px;
+    border-radius:5px;
+    width:700px;
+
+}
+
+.shardPanel {
+    background-color: gainsboro;
+    padding:15px;
+
+    margin-top:5px;
+    margin-left:2px;
+    border-radius:5px;
+    color:dimgray;
+}
+
+.shardCount {
+    padding-left:5px;
+    padding-right:5px;
+    font-size:xx-large;
+    color:dodgerblue;
+    border:1px solid dodgerblue;
+    border-radius:5px;
+    background-color: lightskyblue;
+    margin-bottom:20px;
+}
+.shartUnits {
+    font-size:x-large;
+}
+.statsDiv {
+    color:gray;
+    padding:5px;
+}
+
+
+.sqlContainer {
+    background-color:whitesmoke;
+    padding:5px;
+}
+
+
+.transition {
+    animation: rotation 4s infinite linear;
+}
+
+.errorPanel {
+    background-color: LavenderBlush;
+    margin:10px;
+    padding:10px;
+    border-radius:5px;
+}
+
+.sqlTableForm td {
+    border-radius:5px;
+    border:none;
+}
+
+.sqlTableForm textarea {
+    background-color:gainsboro;
+    height:140px;
+    width:600px;
+    font-size:larger;
+    padding:10px;
+    border:none;
+    margin:2px;
+}
+.sqlTableForm textarea:focus, input:focus {
+    outline:none;
+    background-color:whitesmoke;
+}
+
+.sqlTableForm button {
+    border-radius:6px;
+    border:1px solid silver;
+    padding:3px;
+}
+.mysqlInfo {
+    font-size:x-small;
+    color:dimgray;
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}

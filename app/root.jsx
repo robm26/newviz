@@ -9,14 +9,25 @@ import {
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "DDB VIZ",
   viewport: "width=device-width,initial-scale=1",
 });
+
+import stylesShared from "./styles/shared.css";
+import stylesGrid from "./styles/grid.css";
+
+export const links = () => {
+    return [
+        {rel:"stylesheet", href:stylesShared },
+        {rel:"stylesheet", href:stylesGrid }
+    ];
+};
 
 export default function App() {
   return (
     <html lang="en">
       <head>
+        <link rel="icon"  type="image/png" href="/favicon.ico" />
         <Meta />
         <Links />
       </head>

@@ -1,0 +1,311 @@
+.numberColor {
+    color:orange;
+}
+
+.tableTable table {
+    background-color:whitesmoke;
+    border-collapse: collapse;
+}
+.tableTable tr:hover td {
+    background-color: #d1ddf8;
+}
+
+.tableTable td {
+    background-color: gainsboro;
+    padding:5px;
+    color:gray;
+}
+.tableTable  button {
+    width:100%;
+    color:dimgrey;
+    padding-left:5px;
+    padding-right:5px;
+    border:none;
+
+}
+.tableTable button:hover {
+    color:navy;
+    background-color:gainsboro;
+}
+
+.tableTable .monthlyLabel {
+    background-color: #d6fbd8;
+    horiz-align: center;
+    font-style: italic;
+    color:darkgreen;
+    font-size:10pt;
+    width:100%;
+}
+.tableTable .TotalCostStd {
+    background-color:#C9C9C9;
+    color:black;
+}
+.tableTable .TotalCostIA {
+    background-color:#C9C9C9;
+    color:black;
+}
+.tableTable .DeltaIA_neg {
+    background-color:gray;
+    color:limegreen;
+    font-weight:bold;
+}
+.tableTable .DeltaIA_pos {
+    background-color:gray;
+    color:white;
+}
+
+.itemTable {
+    table-layout:fixed;
+}
+
+.itemTable td {
+    /*color:dimgray;*/
+    /*background-color:gainsboro;*/
+
+    padding-bottom:8px;
+    padding-left:5px;
+    padding-right:5px;
+    border-left:1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    vertical-align:top;
+    white-space:nowrap;
+}
+
+.itemTable td a {
+    color:inherit;
+    text-decoration: none;
+}
+
+.itemTable th {
+    color:gray;
+    font-size:smaller;
+    text-align: left;
+}
+
+.itemTable .tdPK {
+    vertical-align:middle;
+    padding-left:11px;
+
+}
+.itemTable .tdPKhidden {
+    vertical-align:middle;
+    padding-left:11px;
+    color:gainsboro;
+    background-color:whitesmoke;
+}
+.itemTable .tdPKgsiPK {
+    vertical-align:middle;
+    color:darkorchid !important;
+    padding-left:11px;
+    font-weight:bold;
+}
+.itemTable .tdPKgsiSK {
+    vertical-align:middle;
+    color:darkgoldenrod !important;
+    padding-left:11px;
+    font-weight:bold;
+}
+
+.itemTable .gsiPkLink {
+    color:blue;
+
+}
+
+.itemTable .gsiSkLink {
+    color:green;
+
+}
+
+
+
+
+.itemTable .tdSK {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    vertical-align:middle;
+}
+.itemTable .tdSKhidden {
+    vertical-align:middle;
+    color:gainsboro;
+    background-color:whitesmoke !important;
+}
+.itemTable .tdSKgsiPK {
+    vertical-align:middle;
+    color:darkorchid !important;
+    font-weight:bold;
+}
+.itemTable .tdSKgsiSK {
+    vertical-align:middle;
+    color:darkgoldenrod !important;
+    font-weight:bold;
+}
+
+
+.itemTable .emptyGridCell {
+    background-color:whitesmoke;
+
+}
+
+.itemTable  button {
+    width:100%;
+    color:dimgrey;
+    padding-left:5px;
+    padding-right:5px;
+    border:none;
+
+}
+
+
+
+.statsTable {
+    padding:6px;
+    text-align:left;
+
+    /*border-collapse: collapse;*/
+}
+.statsRawTable {
+    padding:5px;
+    background-color: gainsboro;
+    border-radius:6px;
+}
+.statsRawTable td {
+    padding:5px;
+    background-color:lightgrey;
+
+}
+
+.OnDemand {
+    background-color: #dad9c6 !important;
+}
+.Provisioned {
+    background-color: #d1d8e7 !important;
+}
+
+.statsTableHeader {
+    background-color: silver;
+    color:dimgray;
+    padding:4px;
+    text-align:center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size:smaller;
+}
+
+.statsTableData {
+    background-color: gainsboro;
+    color:black;
+    padding:4px;
+    text-align:left;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size:smaller;
+
+}
+
+.scratch {
+    color: lime;
+}
+
+[stripe^='pk0'] {
+    background-color: lightblue ;
+}
+
+[stripe^='pk1'] {
+    background-color: lightskyblue;
+}
+
+[stripe^='gsipk0'] {
+    background-color: orchid;
+}
+
+[stripe^='gsipk1'] {
+    background-color: plum;
+}
+
+
+
+[pkedges*='first'] {
+
+    border-top-left-radius: 20px;
+
+}
+
+[pkedges*='middle'] {
+
+    border-bottom:1px solid silver;
+}
+
+[pkedges*='last'] {
+
+    border-bottom-left-radius: 20px;
+    border-bottom: 2px solid whitesmoke !important;
+}
+
+.sqlTable {
+    background-color: whitesmoke;
+    border:none;
+    padding:3px;
+    border-radius:6px;
+}
+
+.sqlTable th, td {
+    padding:5px;
+    margin:5px;
+    background-color: lightgrey;
+    color:dimgrey;
+    border-bottom:1px solid gainsboro;
+    border-right:1px solid gainsboro;
+
+}
+.sqlTable th {
+    font-weight:unset;
+    background-color: silver;
+    color:black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: sticky;
+    top: 0;
+    border-bottom:3px solid whitesmoke;
+}
+
+.sqlTable [highlight='highlight'] {
+    border:2px solid red;
+
+}
+
+.sqlTableDiv {
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.sqlNull {
+    background-color: whitesmoke;
+}
+
+.sqlTable tr:hover td:empty {
+    background-color: whitesmoke;
+}
+.sqlTable tr:hover td {
+    filter: brightness(110%);
+}
+
+.sqlType {
+    background-color: yellow;
+}
+
+.col-1  {
+    background-color: lavender;
+
+}
+.col-2  {
+    background-color: lemonchiffon;
+}
+.col-3  {
+    background-color: mistyrose;
+}
+.col-4  {
+    background-color: white;
+}
+.col-5  {
+    background-color: beige;
+}
