@@ -1,6 +1,6 @@
 import {
     useLoaderData,
-} from "remix";
+} from "@remix-run/react";
 
 import * as fs from 'fs';
 

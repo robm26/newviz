@@ -1,7 +1,8 @@
 import {
     Link, Form, useLoaderData
-} from "remix";
+} from "@remix-run/react";
 
+import { useState } from "react";
 
 import stylesUrl from "../styles/grid.css";
 
@@ -38,8 +39,8 @@ export function TableGrid(props) {
     }
 
 
-    const [sortAttr, setSortAttr] = React.useState('SizeMB');
-    const [sortDirection, setSortDirection] = React.useState('1');
+    const [sortAttr, setSortAttr] = useState('SizeMB');
+    const [sortDirection, setSortDirection] = useState('1');
 
     const sortSorter = (sa) => {
         if(sa === sortAttr) {

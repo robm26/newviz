@@ -1,4 +1,5 @@
-import {useLoaderData, useSearchParams} from "remix";
+import {useLoaderData, useSearchParams} from "@remix-run/react";
+import { useState } from "react";
 
 import {Menu}     from "~/components/menu";
 import {StreamsPanel}     from "~/components/StreamsPanel";
@@ -38,7 +39,7 @@ export default function TableStatsAction(params) {
 
     const error = data?.error;
 
-    const [gsi, setGsi] = React.useState('');  // GSI hover to preview feature
+    const [gsi, setGsi] = useState('');  // GSI hover to preview feature
 
 
     const payload = error ?

@@ -1,4 +1,5 @@
-import {useLoaderData} from "remix";
+import {useLoaderData} from "@remix-run/react";
+import { useState } from "react";
 
 import { Menu }     from "~/components/menu";
 import { Item } from "~/components/Item";
@@ -69,7 +70,7 @@ export default function TableGetActionPk(params) {
     stats.ConsumedCapacity = data?.capacity;
     const error = data?.error;
 
-    const [gsi, setGsi] = React.useState('');  // GSI hover to preview feature
+    const [gsi, setGsi] = useState('');  // GSI hover to preview feature
 
     const payload = error ?
         (<div className="errorPanel">{error.name}<br/>{error.message}</div>) :

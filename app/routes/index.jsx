@@ -4,7 +4,7 @@ import { Menu } from "~/components/menu";
 
 export default function Index() {
   return (
-    <div>
+    <div className="rootContainer">
       <Menu />
       <Outlet/>
     </div>

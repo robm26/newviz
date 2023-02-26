@@ -1,4 +1,4 @@
-import {Link} from "remix";
+import {Link} from "@remix-run/react";
 
 export function StreamsPanel(params) {
     const partitionCount = params?.shards?.activeShards?.length;

@@ -1,4 +1,5 @@
-import {useLoaderData, Link} from "remix";
+import {useLoaderData, Link} from "@remix-run/react";
+import { useState } from "react";
 
 import {Menu}     from "~/components/menu";
 import {StatsPanel}     from "~/components/StatsPanel";
@@ -90,7 +91,7 @@ export default function TableStatsAction(params) {
 
     const error = data?.error;
 
-    const [gsi, setGsi] = React.useState('');  // GSI hover to preview feature
+    const [gsi, setGsi] = useState('');  // GSI hover to preview feature
 
     const payload = error ?
         (<div className="errorPanel">{error.name}<br/>{error.message}</div>) :
@@ -107,7 +108,7 @@ export default function TableStatsAction(params) {
     return (<div>
         <Menu region={data.params.region} table={data.params.table}  gsi={gsi} setGsi={setGsi} />
 
-
+        stats panel here
         {/*{payload}*/}
         {/*{streamsLink}*/}
 

@@ -3,7 +3,11 @@ import {
     Form,
     useLoaderData,
     useTransition
-} from "remix";
+} from "@remix-run/react";
+
+import { useState } from "react";
+
+// import React, { useState } from 'react';
 
 import {config} from "~/configuration";
 
@@ -15,9 +19,9 @@ export function Menu(params) {
     const gsi = params?.gsi;  // gsi preview
     const setGsi = params?.setGsi;
 
-    const [pk1, setPk1] = React.useState(params?.pk);  // query textbox sets, query button reads
-    const [sk1, setSk1] = React.useState(params?.sk);
-    const [getmode, setGetmode] = React.useState('get');
+    const [pk1, setPk1] = useState(params?.pk);  // query textbox sets, query button reads
+    const [sk1, setSk1] = useState(params?.sk);
+    const [getmode, setGetmode] = useState('get');
 
     if(data?.error) {
         return null;

@@ -8,12 +8,14 @@
 }
 .tableTable tr:hover td {
     background-color: #d1ddf8;
+    
 }
 
 .tableTable td {
     background-color: gainsboro;
     padding:5px;
     color:gray;
+    font-family:Arial;
 }
 .tableTable  button {
     width:100%;
@@ -56,6 +58,7 @@
 
 .itemTable {
     table-layout:fixed;
+    font-family:Arial;
 }
 
 .itemTable td {
