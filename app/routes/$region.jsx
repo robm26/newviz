@@ -23,8 +23,8 @@ export const loader = async ({ params, request }) => {
 
     let tables;
 
-    if(params.region === 'demo') {
-        const dirContents = fs.readdirSync('./app/demos');
+    if(params.region === 'models') {
+        const dirContents = fs.readdirSync('./app/models');
 
         const indexStats = dirContents.indexOf('stats');
         if (indexStats !== -1) {
@@ -49,9 +49,9 @@ export const loader = async ({ params, request }) => {
     if(tables?.TableNames) {
         for(table of tables.TableNames) {
 
-            if(params.region === 'demo') {
+            if(params.region === 'models') {
                 const fileContents = fs.readFileSync(
-                    './app/demos/' + table + '.json',
+                    './app/models/' + table + '.json',
                     {encoding: 'utf-8'},
                 );
                 tableMetadatas.push(JSON.parse(fileContents).Table);

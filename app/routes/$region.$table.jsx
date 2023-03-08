@@ -1,6 +1,5 @@
 import {
-    useLoaderData, useLocation,
-    redirect
+    useLoaderData
 } from "@remix-run/react";
 
 import * as fs from 'fs';
@@ -35,6 +34,7 @@ export const loader = async ({ params }) => {
         };
 
         metadata = await handler(requestBody);
+
     }
 
     return {
@@ -50,8 +50,8 @@ export const action = async ({request}) => {
 
 export default function TableDetails() {
 
-    const location = useLocation();
     const data = useLoaderData();
+
 
     if(!data.metadata)  {
         return (<div className="errorPanel">Error getting table metadata for {data.params.table}</div>);

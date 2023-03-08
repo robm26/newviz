@@ -17,7 +17,7 @@ export const config = () => {
         "us-west-1",
         "us-west-2",
         "eu-west-1",
-        "demo",
+        "models",
         "localhost:8000",
 
     ]

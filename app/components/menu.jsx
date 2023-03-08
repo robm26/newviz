@@ -327,7 +327,7 @@ export function Menu(params) {
                 })}
 
                 <li>{tableTitle}</li>
-                <li>{params?.region === 'demo' ? null : readForm}</li>
+                <li>{params?.region === 'models' ? null : readForm}</li>
                 <li>{params?.pageTitle === 'SQL' ? 'SQL' : null}</li>
                 {params?.sqlConn ? (<li className='mysqlInfo'>database: {params.sqlConn?.database}<br/>hostname: {params.sqlConn?.host}</li>)  : null}
                 <li className='transition'>{transitionDisplay()}</li>

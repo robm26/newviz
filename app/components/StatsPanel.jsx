@@ -1,69 +1,69 @@
 import {Link, Form, useLoaderData, useSearchParams} from "@remix-run/react";
+import { useState } from "react";
 
-// import { Chart as ChartJS,
-//     ArcElement,
-//     LineElement,
-//     BarElement,
-//     PointElement,
-//     BarController,
-//     BubbleController,
-//     DoughnutController,
-//     LineController,
-//     PieController,
-//     PolarAreaController,
-//     RadarController,
-//     ScatterController,
-//     CategoryScale,
-//     LinearScale,
-//     LogarithmicScale,
-//     RadialLinearScale,
-//     TimeScale,
-//     TimeSeriesScale,
-//     Decimation,
-//     Filler,
-//     Legend,
-//     Title,
-//     Tooltip,
-//     SubTitle} from 'chart.js';
+import { Chart as ChartJS,
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip,
+    SubTitle} from 'chart.js';
 
 import { Line } from 'react-chartjs-2';
-
 
 
 export function StatsPanel(params) {
 
     const data = useLoaderData();
 
-    // ChartJS.register(
-    //     ArcElement,
-    //     LineElement,
-    //     BarElement,
-    //     PointElement,
-    //     BarController,
-    //     BubbleController,
-    //     DoughnutController,
-    //     LineController,
-    //     PieController,
-    //     PolarAreaController,
-    //     RadarController,
-    //     ScatterController,
-    //     CategoryScale,
-    //     LinearScale,
-    //     LogarithmicScale,
-    //     RadialLinearScale,
-    //     TimeScale,
-    //     TimeSeriesScale,
-    //     Decimation,
-    //     Filler,
-    //     Legend,
-    //     Title,
-    //     Tooltip,
-    //     SubTitle
-    // );
+    ChartJS.register(
+        ArcElement,
+        LineElement,
+        BarElement,
+        PointElement,
+        BarController,
+        BubbleController,
+        DoughnutController,
+        LineController,
+        PieController,
+        PolarAreaController,
+        RadarController,
+        ScatterController,
+        CategoryScale,
+        LinearScale,
+        LogarithmicScale,
+        RadialLinearScale,
+        TimeScale,
+        TimeSeriesScale,
+        Decimation,
+        Filler,
+        Legend,
+        Title,
+        Tooltip,
+        SubTitle
+    );
 
     const path = '/' + params.region + '/' + params.table;
 
-    const [minutesBack, setMinutesBack] = React.useState(data?.minutesBack ? data?.minutesBack : 20);
+    const [minutesBack, setMinutesBack] = useState(data?.minutesBack ? data?.minutesBack : 20);
 
     const handleMinutesBox = (val) => {
         setMinutesBack(val.target.value);
@@ -88,7 +88,7 @@ export function StatsPanel(params) {
         }
 
     }
-    console.log('statsCount: ', statsCount);
+    // console.log('statsCount: ', statsCount);
 
     if(statsCount > 0) {
 

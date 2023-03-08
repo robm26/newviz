@@ -14,8 +14,9 @@
     "isbot": "^3.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-chartjs-2": "^4.0.1",
-    
+    "chart.js": "^4.2",
+    "react-chartjs-2": "^5.2",
+
     "@aws-sdk/client-cloudwatch": "^3.53.0",
     "@aws-sdk/client-dynamodb": "^3.52.0",
     "@aws-sdk/client-dynamodb-streams": "^3.54.1",

@@ -12,6 +12,7 @@ export const action = async ({ request }) => {
 };
 
 export const loader = async ({ params, request }) => {
+
     const url = new URL(request.url);
     const minutesBack = url.searchParams.get("minutesBack");
 
@@ -22,8 +23,6 @@ export const loader = async ({ params, request }) => {
         indexName = tableName.substring(caretPosition + 1);
         tableName = tableName.substring(0, caretPosition);
     }
-
-    //const metadata = await handler({'Region': params.region, 'ActionName': 'describe', 'TableName': tableName});
 
     let metadata;
 
@@ -43,8 +42,15 @@ export const loader = async ({ params, request }) => {
         };
 
         metadata = await handler(requestBody);
+
     }
 
+    const tn = metadata?.Table?.TableName;
+    if(!tn) {
+        return {
+            error:'Error reading from table: ' + params.region + ' : ' +  tableName
+        };
+    }
 
     let stats = [];
 
@@ -67,7 +73,7 @@ export const loader = async ({ params, request }) => {
             StartDate: before.toISOString(),
             EndDate:   now.toISOString()
         });
-        console.log('statsssse');
+
         // console.log(JSON.stringify(stats, null, 2));
     }
 
@@ -87,13 +93,16 @@ export const loader = async ({ params, request }) => {
 export default function TableStatsAction(params) {
     const data = useLoaderData();
 
-    const path = '/' + data.params.region + '/' + data.params.table;
-
     const error = data?.error;
+    if(error) {
+        return (<div className="errorPanel">{error}</div>);
+    }
+
+    const path = '/' + data.params.region + '/' + data.params.table;
 
     const [gsi, setGsi] = useState('');  // GSI hover to preview feature
 
-    const payload = error ?
+    const statsPage = error ?
         (<div className="errorPanel">{error.name}<br/>{error.message}</div>) :
         (<StatsPanel
             stats={data.stats}
@@ -105,15 +114,15 @@ export default function TableStatsAction(params) {
         <Link to={path + '/streams'}><button className=''>DESCRIBE STREAM</button></Link>
     </div>);
 
+
     return (<div>
         <Menu region={data.params.region} table={data.params.table}  gsi={gsi} setGsi={setGsi} />
 
-        stats panel here
-        {/*{payload}*/}
-        {/*{streamsLink}*/}
+        {/* {payload} */}
+        {/* {streamsLink} */}
 
-        {/*{data.params.region === 'demo' ? null : payload}*/}
-        {/*{data.params.region === 'demo' ? null : streamsLink}*/}
+        {/*{data.params.region === 'models' ? null : statsPage}*/}
+        {data.params.region === 'models' ? null : streamsLink}
 
     </div>);
 

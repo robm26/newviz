@@ -31,11 +31,29 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className='rootContainer'>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary({ error }) {
+  console.error(error);
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <div className='errorPanel'>error: {error}</div>
+        {/* add the UI you want your users to see */}
+        <Scripts />
       </body>
     </html>
   );

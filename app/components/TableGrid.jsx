@@ -34,7 +34,7 @@ export function TableGrid(props) {
     let priceRegion = region === 'us-east-1' ? '' : (region.slice(0,2) + region.slice(3,4) + region.split('-')[2] + '-').toUpperCase();
     priceRegion = region === 'eu-west-1' ? 'EU' : priceRegion;
 
-    if(data.region === 'demo') {
+    if(data.region === 'models') {
         priceRegion = '';
     }
 
@@ -212,19 +212,19 @@ export function TableGrid(props) {
             <th><button onClick={()=>{sortSorter('ProvisionedRCU')}}>Prov. RCU</button></th>
             <th><button onClick={()=>{sortSorter('ProvisionedWCU')}}>Prov. WCU</button></th>
 
-            <th><button onClick={()=>{sortSorter('StorageCostStd')}}>Storage Cost Std</button></th>
-            <th><button onClick={()=>{sortSorter('StorageCostIA')}}>Storage Cost IA</button></th>
+            <th><button onClick={()=>{sortSorter('StorageCostStd')}}>Storage Cost</button></th>
+            {/*<th><button onClick={()=>{sortSorter('StorageCostIA')}}>Storage Cost IA</button></th>*/}
 
-            <th><button onClick={()=>{sortSorter('ReadCostStd')}}>Read Cost Std</button></th>
-            <th><button onClick={()=>{sortSorter('ReadCostIA')}}>Read Cost IA</button></th>
+            <th><button onClick={()=>{sortSorter('ReadCostStd')}}>Read Cost</button></th>
+            {/*<th><button onClick={()=>{sortSorter('ReadCostIA')}}>Read Cost IA</button></th>*/}
 
-            <th><button onClick={()=>{sortSorter('WriteCostStd')}}>Write Cost Std</button></th>
-            <th><button onClick={()=>{sortSorter('WriteCostIA')}}>Write Cost IA</button></th>
+            <th><button onClick={()=>{sortSorter('WriteCostStd')}}>Write Cost</button></th>
+            {/*<th><button onClick={()=>{sortSorter('WriteCostIA')}}>Write Cost IA</button></th>*/}
 
-            <th><button onClick={()=>{sortSorter('TotalCostStd')}}>Total Cost Std</button></th>
-            <th><button onClick={()=>{sortSorter('TotalCostIA')}}>Total Cost IA</button></th>
+            <th><button onClick={()=>{sortSorter('TotalCostStd')}}>Total Cost</button></th>
+            {/*<th><button onClick={()=>{sortSorter('TotalCostIA')}}>Total Cost IA</button></th>*/}
 
-            <th><button onClick={()=>{sortSorter('DeltaIA')}}>Difference</button></th>
+            {/*<th><button onClick={()=>{sortSorter('DeltaIA')}}>Difference</button></th>*/}
         </tr>
         </thead>
     );
@@ -274,16 +274,16 @@ export function TableGrid(props) {
                     <td>{row.ProvisionedRCU === 0 ? '-' : row.ProvisionedRCU}</td>
                     <td>{row.ProvisionedWCU === 0 ? '-' : row.ProvisionedWCU}</td>
                     <td>{rounder(row.StorageCostStd)}</td>
-                    <td>{rounder(row.StorageCostIA)} </td>
+                    {/*<td>{rounder(row.StorageCostIA)} </td>*/}
                     <td>{rounder(row.ReadCostStd)}</td>
-                    <td>{rounder(row.ReadCostIA)} </td>
+                    {/*<td>{rounder(row.ReadCostIA)} </td>*/}
                     <td>{rounder(row.WriteCostStd)}</td>
-                    <td>{rounder(row.WriteCostIA)} </td>
+                    {/*<td>{rounder(row.WriteCostIA)} </td>*/}
 
                     <td className="TotalCostStd">{rounder(row.TotalCostStd).toLocaleString()}</td>
-                    <td className="TotalCostIA" >{rounder(row.TotalCostIA).toLocaleString()} </td>
+                    {/*<td className="TotalCostIA" >{rounder(row.TotalCostIA).toLocaleString()} </td>*/}
 
-                    <td className={row.DeltaIA >= 0 ? "DeltaIA_pos" : "DeltaIA_neg"} >{rounder(row.DeltaIA).toLocaleString()} </td>
+                    {/*<td className={row.DeltaIA >= 0 ? "DeltaIA_pos" : "DeltaIA_neg"} >{rounder(row.DeltaIA).toLocaleString()} </td>*/}
 
                 </tr>
             })}
